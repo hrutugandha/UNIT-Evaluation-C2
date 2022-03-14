@@ -106,7 +106,7 @@ const FixedAccountUser = mongoose.model("FixedAccountuser",FixedAccountSchema);
 
 app.get("/users", async(req,res) =>{
     try{
-        const user = await user.find().lean().exec();
+        const User = await user.find().lean().exec();
 
         return res.status(200).send({users:users});
     }catch(err){
@@ -117,7 +117,7 @@ app.get("/users", async(req,res) =>{
 
 app.post("/savingAccount", async(req,res) => {
     try{
-        const user = await User.create(req.body);
+        const User = await user.create(req.body);
 
         return res.status(201).send(SavingsAccountUser);
     }
@@ -128,7 +128,7 @@ catch(err){
 
 app.post("/savingAccount", async(req,res) =>{
     try{
-        const user = await User.create(req.body);
+        const User = await user.create(req.body);
 
         return res.status(201).send(FixedAccountUser);
     }
