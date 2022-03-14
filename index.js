@@ -126,7 +126,7 @@ catch(err){
 }
 })
 
-app.post("/savingAccount", async(req,res) =>{
+app.post("/FixedAccount", async(req,res) =>{
     try{
         const User = await user.create(req.body);
 
